@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Senior IT Project Manager — Online Resume (Example)</title>
+  <meta name="description" content="A web-first resume template for a Senior IT Project Manager showcasing SDLC leadership, quantified outcomes, and business impact." />
+  <style>
+    :root{
+      --primary-teal:#05777d;
+      --secondary-grape:#6F2DA8;
+      --accent-electric:#8f00ff;
+      --ink:#111827;/* slate-900 */
+      --muted:#4b5563;/* slate-600 */
+      --bg:#f8fafc;/* slate-50 */
+      --card:#ffffff;
+      --line:#e5e7eb;/* slate-200 */
+      --good:#10b981;/* green-500 */
+      --warn:#D97706;/* amber-600 */
+      --bad:#ef4444;/* red-500 */
+      --radius:18px;
+      --shadow:0 10px 25px rgba(0,0,0,0.08);
+      --shadow-sm:0 4px 12px rgba(0,0,0,0.06);
+      --maxw:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--ink);background:linear-gradient(135deg, #f7fbff, #fbf7ff)}
+    a{color:var(--primary-teal);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px}
+    header.hero{background:radial-gradient(1200px 400px at 10% -10%,rgba(5,119,125,.18),transparent),
+                         radial-gradient(800px 300px at 90% -10%,rgba(111,45,168,.12),transparent);
+      padding:44px 0 12px}
+    .hero-card{display:grid;grid-template-columns:1fr;gap:22px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+    @media(min-width:860px){.hero-card{grid-template-columns:2fr 1fr;align-items:center}}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:linear-gradient(90deg,rgba(5,119,125,.1),rgba(111,45,168,.08));border:1px solid var(--line);padding:8px 12px;border-radius:999px;font-size:.9rem;color:var(--muted)}
+    .title{font-size:clamp(1.6rem,2.4vw,2.2rem);margin:8px 0 6px}
+    .subtitle{color:var(--muted);margin-top:0}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow-sm);font-weight:600}
+    .btn.primary{background:var(--primary-teal);color:#fff;border-color:transparent}
+    .btn.secondary{background:#fff;color:var(--secondary-grape);border-color:rgba(111,45,168,.3)}
+
+    /* KPI band */
+    .kpi{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:22px 0}
+    @media(min-width:760px){.kpi{grid-template-columns:repeat(4,1fr)}}
+    .kpi .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow-sm)}
+    .kpi .num{font-size:1.8rem;font-weight:800;color:var(--secondary-grape)}
+    .kpi .label{color:var(--muted)}
+
+    /* section */
+    section{margin:34px 0}
+    h2{font-size:clamp(1.2rem,2vw,1.6rem);margin:0 0 12px}
+    .section-desc{color:var(--muted);margin-top:0}
+
+    /* skills */
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:linear-gradient(180deg,#fff, #fafafa)}
+    .chip.sdlc{border-color:rgba(5,119,125,.25);color:#064e53;background:linear-gradient(180deg,rgba(5,119,125,.05),#fff)}
+
+    /* project cards */
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:980px){.grid{grid-template-columns:1fr 1fr}}
+    .project{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-sm);overflow:hidden}
+    .project header{padding:18px;border-bottom:1px dashed var(--line);background:radial-gradient(700px 220px at 20% -40%,rgba(5,119,125,.10),transparent)}
+    .project h3{margin:0 0 8px;font-size:1.1rem}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:.92rem}
+    .project .body{padding:18px;display:grid;gap:12px}
+    .bullets{padding-left:18px;margin:0}
+    .bullets li{margin:6px 0}
+    .badges{display:flex;flex-wrap:wrap;gap:6px}
+    .badge.phase{background:rgba(111,45,168,.08);border-color:rgba(111,45,168,.25);color:#4b2b7a;font-weight:600}
+    details{border-top:1px dashed var(--line);padding:14px 18px}
+    details>summary{cursor:pointer;font-weight:700}
+    .triad{display:grid;grid-template-columns:1fr;gap:10px}
+    @media(min-width:760px){.triad{grid-template-columns:repeat(3,1fr)}}
+    .triad .panel{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff}
+    .panel h4{margin:0 0 8px;font-size:1rem;color:var(--muted)}
+
+    /* Quote */
+    .quote{border-left:4px solid var(--secondary-grape);background:linear-gradient(90deg,rgba(111,45,168,.07),transparent);padding:12px 16px;border-radius:8px}
+
+    /* footer */
+    footer{margin:42px 0 10px;color:var(--muted);text-align:center}
+
+    .grape{color:var(--secondary-grape)}
+
+    /* print */
+    @media print{
+      .btn,.cta{display:none !important}
+      .project{box-shadow:none}
+      body{background:#fff}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-card" role="banner">
+        <div>
+          <span class="badge" aria-label="Open to remote and hybrid roles">👋 Senior IT Project Manager · SDLC & Delivery Leadership</span>
+          <h1 class="title">Glen R Fullerton— Senior IT Project Manager</h1>
+          <p class="subtitle">30 years orchestrating full‑lifecycle application development & enterprise deployments (Waterfall, Agile, Hybrid). Expert at translating strategy into roadmaps, aligning cross‑functional teams, and delivering measurable business outcomes.</p>
+          <div class="cta" role="navigation" aria-label="Primary">
+            <a class="btn primary" href="#projects">View Featured Projects</a>
+            <a class="btn primary" href="#skills">Skills &amp; SDLC</a>
+            <a class="btn primary" href="#contact">Contact</a>
+          </div>
+        </div>
+        <aside>
+          <div class="quote">
+            <strong>Value snapshot</strong>
+            <ul class="bullets">
+              <li>On‑time delivery rate: <strong>94%</strong> across 120+ releases.</li>
+              <li>Average defect leakage reduced by <strong>28%</strong> post‑release.</li>
+              <li>Programs up to <strong>$18.5M</strong>; teams to <strong>85</strong> across Product, Eng, QA, SecOps.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <div class="kpi" aria-label="Key career metrics">
+        <div class="card"><div class="num" data-count="68">0</div><div class="label">Major Releases</div></div>
+        <div class="card"><div class="num" data-count="94">0</div><div class="label">% On‑Time</div></div>
+        <div class="card"><div class="num" data-count="28">0</div><div class="label">% Fewer Post‑Prod Defects</div></div>
+        <div class="card"><div class="num" data-count="18.5">0</div><div class="label">$MM Largest Program</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Core Skills & SDLC Coverage</h2>
+      <p class="section-desc">Breadth across discovery → operations, depth in governance, risk, and delivery. Comfortable leading pure Agile, classic Waterfall, and pragmatic hybrids.</p>
+      <div class="chips" aria-label="SDLC phases">
+        <span class="chip sdlc">Discovery</span>
+        <span class="chip sdlc">Requirements</span>
+        <span class="chip sdlc">Solution Design</span>
+        <span class="chip sdlc">Build</span>
+        <span class="chip sdlc">Test (QA/UAT)</span>
+        <span class="chip sdlc">Release & Deploy</span>
+        <span class="chip sdlc">Operate & Improve</span>
+      </div>
+      <div class="chips" style="margin-top:10px" aria-label="Delivery capabilities">
+        <span class="chip sdlc">Roadmapping</span>
+        <span class="chip sdlc">Portfolio Prioritization</span>
+        <span class="chip sdlc">Budgeting & Forecast</span>
+        <span class="chip sdlc">Risk/RAID</span>
+        <span class="chip sdlc">Vendor Mgmt</span>
+        <span class="chip sdlc">Change Mgmt (OCM)</span>
+        <span class="chip sdlc">Compliance: SOX/PCI/HIPAA</span>
+        <span class="chip sdlc">Cloud: Azure/AWS</span>
+        <span class="chip sdlc">DevOps: CI/CD</span>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Featured Projects (with SDLC scope, metrics, and outcomes)</h2>
+      <p class="section-desc">Each project lists phases led, KPIs, and business impact. Expand the deep‑dive for context and artifacts.</p>
+
+      <div class="grid">
+        <!-- Project 1 -->
+        <article class="project" aria-label="OmniCommerce Mobile" itemscope itemtype="https://schema.org/CreativeWork">
+          <header>
+            <h3 itemprop="name">OmniCommerce Mobile App Launch (Retail)</h3>
+            <div class="meta">
+              <span>Budget: $6.2M</span>
+              <span>Team: 23</span>
+              <span>Duration: 11 months</span>
+              <span>Method: Hybrid, Remote Teams (Scrum + Stage Gates)</span>
+            </div>
+          </header>
+          <div class="body">
+            <div class="badges" aria-label="SDLC phases managed">
+              <span class="badge phase">Discovery</span>
+              <span class="badge phase">Requirements</span>
+              <span class="badge phase">Design</span>
+              <span class="badge phase">Build</span>
+              <span class="badge phase">Test</span>
+              <span class="badge phase">Deploy</span>
+              <span class="badge phase">Operate</span>
+            </div>
+            <ul class="bullets">
+              <li>Shaped roadmap and prioritized MVP via <strong>dual‑track discovery</strong> and customer journey mapping.</li>
+              <li>Instituted <strong>definition of ready/done</strong> and sprint review scorecards; increased throughput by <strong>+21%</strong>.</li>
+              <li>Partnered with SecOps to embed <strong>OWASP</strong> checks in CI; reduced critical vulns pre‑release by <strong>−39%</strong>.</li>
+              <li><strong>Outcome:</strong> Launched v1 on time; first‑quarter in‑app sales <strong>+40%</strong>; app store rating 4.6★; cart abandonment down <strong>−18%</strong>.</li>
+            </ul>
+            <details>
+              <summary>Deep‑dive: problem → approach → results</summary>
+              <div class="triad">
+                <div class="panel"><h4>Problem</h4><p>Fragmented checkout and inventory visibility caused 28% cart abandonment and poor mobile NPS (28).</p></div>
+                <div class="panel"><h4>Approach</h4><p>Consolidated microservices behind BFF layer, implemented secure one‑tap pay, introduced beta ring releases, and real‑time inventory APIs.</p></div>
+                <div class="panel"><h4>Results</h4><p>Bug rate post‑prod −25%; mobile NPS → 46; monthly active users +32%; revenue attribution verified via experiment framework.</p></div>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project" aria-label="Claims Modernization" itemscope itemtype="https://schema.org/CreativeWork">
+          <header>
+            <h3 itemprop="name">Claims Processing Modernization (Health Services)</h3>
+            <div class="meta">
+              <span>Budget: $9.8M</span>
+              <span>Team: 32</span>
+              <span>Duration: 15 months</span>
+              <span>Method: Azure DevOps Remote Teams</span>
+            </div>
+          </header>
+          <div class="body">
+            <div class="badges" aria-label="SDLC phases managed">
+              <span class="badge phase">Discovery</span>
+              <span class="badge phase">Requirements</span>
+              <span class="badge phase">Design</span>
+              <span class="badge phase">Build</span>
+              <span class="badge phase">Test</span>
+              <span class="badge phase">Deploy</span>
+            </div>
+            <ul class="bullets">
+              <li>Owned intake → delivery governance; implemented <strong>Epic/PI Kanban</strong>, WIP limits, and <strong>OKR‑linked KPIs</strong>.</li>
+              <li>Automated adjudication rules testing; <strong>−31%</strong> regression defects; UAT pass rate to <strong>96%</strong>.</li>
+              <li>Enabled <strong>zero‑downtime</strong> cutover with feature flags and canarying.</li>
+              <li><strong>Outcome:</strong> Avg claim cycle time <strong>−38%</strong> (12→7.4 days); first‑call resolution +19 pts; contact center volume −15%.</li>
+            </ul>
+            <details>
+              <summary>Deep‑dive: evidence & artifacts</summary>
+              <ul class="bullets">
+                <li>Artifacts: RAID log, RACI, Data migration runbook, UAT scripts, HIPAA compliance matrix.</li>
+                <li>Telemetry: DORA metrics, synthetic monitoring baselines, SLA error budgets and burn‑rate alerts.</li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project" aria-label="ERP Migration" itemscope itemtype="https://schema.org/CreativeWork">
+          <header>
+            <h3 itemprop="name">ERP Migration to SAP S/4HANA (Manufacturing)</h3>
+            <div class="meta">
+              <span>Budget: $12.3M</span>
+              <span>Team: 78</span>
+              <span>Duration: 18 months</span>
+              <span>Method: Waterfall → Agile waves, Remote Teams</span>
+            </div>
+          </header>
+          <div class="body">
+            <div class="badges" aria-label="SDLC phases managed">
+              <span class="badge phase">Requirements</span>
+              <span class="badge phase">Design</span>
+              <span class="badge phase">Build</span>
+              <span class="badge phase">Test</span>
+              <span class="badge phase">Deploy</span>
+              <span class="badge phase">Operate</span>
+            </div>
+            <ul class="bullets">
+              <li>Phased rollout by plant; parallel runs with <strong>cutback windows</strong> and freeze controls.</li>
+              <li>Data migration factory: mock loads, reconciliations, <strong>defect triage</strong>; <strong>99.4%</strong> data accuracy at go‑live.</li>
+              <li><strong>Outcome:</strong> Inventory turns <strong>+22%</strong>; forecast accuracy +12 pts; cash‑to‑cash cycle <strong>−10 days</strong>; procurement savings <strong>3.1%</strong>.</li>
+            </ul>
+            <details>
+              <summary>Deep‑dive: risk & change management</summary>
+              <ul class="bullets">
+                <li>OCM: super‑user network, role‑based training, go‑live hypercare (<em>T‑0 to T+30</em>), adoption scorecards.</li>
+                <li>Risks mitigated: supplier master dedupe, batch traceability, segregation of duties (SOX) in workflows.</li>
+              </ul>
+            </details>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project" aria-label="Cloud Migration" itemscope itemtype="https://schema.org/CreativeWork">
+          <header>
+            <h3 itemprop="name">Hybrid Cloud Migration (Azure + AVS)</h3>
+            <div class="meta">
+              <span>Budget: $5.7M</span>
+              <span>Team: 38</span>
+              <span>Duration: 9 months</span>
+              <span>Method: Agile (Scrum)</span>
+            </div>
+          </header>
+          <div class="body">
+            <div class="badges" aria-label="SDLC phases managed">
+              <span class="badge phase">Discovery</span>
+              <span class="badge phase">Design</span>
+              <span class="badge phase">Build</span>
+              <span class="badge phase">Test</span>
+              <span class="badge phase">Deploy</span>
+              <span class="badge phase">Operate</span>
+            </div>
+            <ul class="bullets">
+              <li>Led landing zone design, <strong>blue/green</strong> cutovers, and IaC (Terraform) for repeatable environments.</li>
+              <li>Instituted SLOs and golden signals; MTTR improved <strong>−41%</strong>; P1 incidents down <strong>−29%</strong>.</li>
+              <li><strong>Outcome:</strong> Infra cost <strong>−18%</strong> via rightsizing/reserved instances; performance <strong>+26%</strong> for top workflows.</li>
+            </ul>
+            <details>
+              <summary>Deep‑dive: governance & security</summary>
+              <ul class="bullets">
+                <li>Guardrails: policy as code, least‑privilege RBAC, key rotation, secrets mgmt, disaster recovery runbooks.</li>
+              </ul>
+            </details>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="exp-title">
+      <h2 id="exp-title">Experience Highlights</h2>
+      <p class="section-desc">Selected roles spanning enterprise PMO leadership and complex, multi‑team delivery.</p>
+      <ul class="bullets">
+        <li><strong>Sr IT Project Manager — State of Arizona, Dept of Revenue</strong> · Completed Data Center physical move in 3 days, with <strong>99.3% </strong> data accuracy at Go Live.</li>
+        <li><strong>PMO Director — Rohan Web Services</strong> · Built governance and onboarding playbook, esatablished client services portal & improved customer satisfaction score by 29% within 2 quarters.</li>
+        <li><strong>Aerospace Sr Program Manager, Additive Manufactured Parts Implementation</strong> · Led portfolio of 27 projects; established intake/governance; capacity planning improved +17%, Reduced final product cost by $12M. Stood up new Supply Chain for additive parts</li>
+      </ul>
+    </section>
+
+    <section id="credentials" aria-labelledby="cred-title">
+      <h2 id="cred-title">Certifications & Education</h2>
+      <div class="chips">
+        <span class="chip">PMP</span>
+        <span class="chip">CIPM</span>
+        <span class="chip">Scrum Master</span>
+        <span class="chip">Product Owner</span>
+        <span class="chip">Lean Six Sigma Black Belt</span>
+        <span class="chip">M.S. - International Resource Management</span>
+      </div>
+    </section>
+
+    <section id="testimonials" aria-labelledby="testi-title">
+      <h2 id="testi-title">Testimonials</h2>
+      <div class="quote"><em>“Glen blends rigor with empathy, and works tirelessly to exceed client expectations. We lowered our CES by <strong>18%</strong> , raised our CSAT by<strong>29%</strong> and saw an increase in customer return rate of <strong>23%</strong>  in the 2.5 years Glen was Director of Client Services PMO and our customers noticed the quality.”</em> — CEO, COO Rohan Web Services</div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact: Email - <span class="grape">glen.r.fullerton@gmail.com</span> Phone - <span class="grape">(480) 256-2447</span></h2>
+      <p class="section-desc">Available for remote or hybrid roles. Based in Phoenix, AZ</p>
+      <div class="chips">
+        <a class="chip" href="mailto:glen.r.fullerton@gmail.com">Email</a>
+        <a class="chip" href="https://linkedin.com/in/glenrfullerton" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip" href="javascript:void(0)" id="download-pdf" role="button" aria-label="Download this page as PDF">Download PDF</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2025 Glen R Fullerton · Sr IT Project Manager · Built with semantic HTML & a11y in mind.</div>
+  </footer>
+
+  
+  <script>
+    // KPI number animation
+    const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+    function animateNumbers(){
+      const els = document.querySelectorAll('.kpi .num');
+      els.forEach(el => {
+        const target = parseFloat(el.getAttribute('data-count') || '0');
+        const decimals = (target % 1 !== 0) ? 1 : 0;
+        const start = 0, duration = 1200, startTime = performance.now();
+        function tick(now){
+          const p = Math.min(1, (now - startTime) / duration);
+          const v = start + (target - start) * easeOutCubic(p);
+          el.textContent = v.toFixed(decimals);
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }
+
+    // Lazy-load libs if missing
+    function loadScript(src){
+      return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src; s.onload = resolve; s.onerror = reject;
+        document.head.appendChild(s);
+      });
+    }
+    async function ensureLibs(){
+      const needsH2C = (typeof window.html2canvas === 'undefined');
+      const needsJSPD = !(window.jspdf && window.jspdf.jsPDF);
+      const jobs = [];
+      if (needsH2C) jobs.push(loadScript('https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js'));
+      if (needsJSPD) jobs.push(loadScript('https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js'));
+      if (jobs.length) await Promise.all(jobs);
+    }
+
+    // PDF mode styles
+    function enterPdfMode(){
+      const css = `
+        body.pdf-mode { background:#fff !important; }
+        .pdf-mode main, .pdf-mode .wrap { background:#fff !important; }
+        .pdf-mode .grid { display:block !important; }
+        .pdf-mode .project { width:100% !important; break-inside: avoid; page-break-inside: avoid; box-shadow:none !important; }
+        .pdf-mode #download-pdf { display:none !important; }
+        .pdf-mode * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      `;
+      const style = document.createElement('style');
+      style.id = 'pdf-mode-style';
+      style.textContent = css;
+      document.head.appendChild(style);
+      document.body.classList.add('pdf-mode');
+    }
+    function exitPdfMode(){
+      document.body.classList.remove('pdf-mode');
+      const s = document.getElementById('pdf-mode-style'); if (s) s.remove();
+    }
+
+    async function downloadPDF(){
+      try{
+        await ensureLibs();
+        const { jsPDF } = window.jspdf;
+        const target = document.querySelector('main') || document.body;
+
+        // Expand all details so deep-dives are included
+        target.querySelectorAll('details').forEach(d => d.open = true);
+
+        enterPdfMode(); window.scrollTo(0,0);
+
+        const canvas = await html2canvas(target, {
+          scale: Math.min(2, (window.devicePixelRatio || 1)),
+          useCORS: true, backgroundColor: '#ffffff',
+          windowWidth: document.documentElement.scrollWidth,
+          windowHeight: document.documentElement.scrollHeight,
+          scrollX: 0, scrollY: -window.scrollY
+        });
+
+        const pdf = new jsPDF({ orientation: 'p', unit: 'pt', format: 'letter', compress: true });
+        const pageW = pdf.internal.pageSize.getWidth();
+        const pageH = pdf.internal.pageSize.getHeight();
+        const margin = 24;
+        const printableW = pageW - margin*2;
+        const ratio = printableW / canvas.width;
+        const slicePx = Math.floor((pageH - margin*2) / ratio);
+        const totalPx = canvas.height;
+
+        const temp = document.createElement('canvas');
+        const ctx = temp.getContext('2d');
+        let y = 0, pageIndex = 0;
+
+        while (y < totalPx) {
+          const sliceH = Math.min(slicePx, totalPx - y);
+          temp.width = canvas.width; temp.height = sliceH;
+          ctx.clearRect(0,0,temp.width,temp.height);
+          ctx.drawImage(canvas, 0, y, canvas.width, sliceH, 0, 0, temp.width, temp.height);
+          const img = temp.toDataURL('image/jpeg', 0.98);
+          const renderH = sliceH * ratio;
+          if (pageIndex > 0) pdf.addPage();
+          pdf.addImage(img, 'JPEG', margin, margin, printableW, renderH);
+          pageIndex++; y += sliceH;
+        }
+
+        // safety: remove a truly blank trailing page if it ever slips in
+        if (pdf.getNumberOfPages() > 1) {
+          const n = pdf.getNumberOfPages();
+          const last = pdf.internal.pages[n];
+          if (Array.isArray(last) && last.length <= 2) pdf.deletePage(n);
+        }
+
+        pdf.save('Glen_Fullerton_Portfolio.pdf');
+      } catch (err){
+        console.error('PDF generation failed. Falling back to print()', err);
+        window.print();
+      } finally {
+        exitPdfMode();
+      }
+    }
+
+    function bindUI(){
+      const pdfBtn = document.getElementById('download-pdf');
+      if (pdfBtn) pdfBtn.addEventListener('click', (e) => { e.preventDefault(); downloadPDF(); });
+      animateNumbers();
+    }
+
+    if (document.readyState !== 'loading') bindUI();
+    else document.addEventListener('DOMContentLoaded', bindUI);
+  </script>
+</body>
+</html>
